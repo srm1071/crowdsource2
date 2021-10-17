@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <style>
+    .footer {
+      
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(7, 53, 75);
+      color: white;
+      text-align: center;
+    }
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1BBA93;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #bcf5e7;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #0b0c0c;
+    color: white;
+  }
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to our Survey</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Crowdsourcing</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/register" tabindex="-1" aria-disabled="true">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://youtu.be/tAZR21dfGTY" tabindex="-1" class="btn btn-primary" role="button"
+            aria-pressed="true" target="_blank">Video Link</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <img src="/static/logok.png" alt="logo" align="right" />
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+     <h5><font color=" #0e8288"><strong>We are working
+      on a small project for the betterment of our university life on how mask and other essentials can be distributed seamlessly allover the university
+      when it will open after covid pandemic.
+      </strong></br>Hope you all will cooperate with us. A screenshot of the submission form is shown at the right side.
+      Instructions for the form submission are given below:</font></h5>
+      </br><font color="red">* You can skip this instruction and see the 4-min video link given in navigation bar.<strong>(Recommended *)</strong>
+        </br>* For any queries you can reach us at: <strong>contactus.crowdsourcing@gmail.com</strong>
+      </font>
+    </br>1. You have to choose 3 locations inside our university where you think it will be best to put the distribution centres.
+    </br>2. Click on "Click here to view the map" button and see the map. Coordinates are given as decimal numbers along X and Y direction
+    for sake of simplicity. You can zoom in and zoom out the map.
+    </br>3. Place the first coordinate values in the place "Coodinate1". eg- ( X:100  Y:150 ). Input in one or 
+    two sentences that why you have choosen the corresponding coordinate. (eg: Coordinate1 is near PG hostel.).
+  </br>4. Repeat same process for coordinate2 and coordinate3. <font color="red">Please make sure that distance between any two coordinates
+  are >=10. (*Note: Distance is auto calculated and has been shown in the form.)</font>
+    </br>5. Put an rating weightage preference for each location such that <font color="red">total of 3 rating values for 3 coordinates is =10.
+    eg: Lets say I prefer location 2 much than other two location. So, I shall put rating for coordinate1: 3.
+    rating for coordinate2: 4, rating for coordinate3: 3. Total=3+4+3=10. </font></br>
+    *Note: Sum will be auto calculated and shown.
+    </br>6. Repeat same process for coordinate2 and coordinate3.
+
+    
+
+      
+    </div>
+    <div class="col-2">
+      <img src="/static/form.PNG">
+    </div>
+  </div>
+</div>
+
+
+
+ 
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  <div class="footer my-3">
+      <p>@ Developed and maintained by Suraj Mandal</p>
+  </div>
+</body>
+
+</html>

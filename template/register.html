@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <title>Welcome to our Survey</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+  /*---------------------------------------*/
+  /* Font */
+  /*---------------------------------------*/
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+  /*---------------------------------------*/
+  /* Register Form  #78b7ba*/
+  /*---------------------------------------*/
+  body {
+    background: linear-gradient(to right, #0e8288 0%, #0e8288 50%, #0e8288 99%);
+  }
+
+  .signup-form {
+    font-family: "Roboto", sans-serif;
+    width: 650px;
+    margin: 30px auto;
+    background: linear-gradient(to right, #ebeecd 0%, #ebeecd 50%, #ebeecd 99%);
+    border-radius: 10px;
+  }
+
+  /*---------------------------------------*/
+  /* Form Header */
+  /*---------------------------------------*/
+  .form-header {
+    background-color: #383f3f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .form-header h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  /*---------------------------------------*/
+  /* Form Body */
+  /*---------------------------------------*/
+  .form-body {
+    padding: 10px 40px;
+    color: rgb(204, 189, 189);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+
+  .form-body .label-title {
+    color: #10744a;
+    font-size: 17px;
+
+  }
+  .form-body .label-rating {
+    color: #10744a;
+    font-size: 17px;
+
+  }
+
+  .form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #0a0a0a;
+    text-align: left;
+    border: 1px solid #0c0c0c;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    outline: none;
+  }
+
+
+
+  .horizontal-group .left {
+    float: left;
+    width: 50%;
+  }
+
+  .horizontal-group .right {
+    float: right;
+    width: 49%;
+  }
+  .horizontal-group .extra {
+    width: 60%;
+  }
+
+  input[type="file"] {
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+  }
+
+  #range-label {
+    width: 15%;
+    padding: 5px;
+    background-color: #0d0d0e;
+    color: white;
+    border-radius: 5px;
+    font-size: 17px;
+    position: relative;
+    top: -8px;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #d9d9d9;
+  }
+
+  /*---------------------------------------*/
+  /* Form Footer */
+  /*---------------------------------------*/
+  .signup-form .form-footer {
+    background-color: #383f3f;
+    ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 40px;
+    text-align: right;
+    border-top: 1px solid #a29cd3;
+    clear: both;
+  }
+
+  .form-footer span {
+    float: left;
+    margin-top: 10px;
+    color: #999;
+    font-style: italic;
+    font-weight: thin;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1BBA93;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    color: #bcf5e7;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #0b0c0c;
+    color: white;
+  }
+
+  input[type="radio"] {
+    margin: 0 5px 0 10px;
+  }
+  nav1 {
+    width: 100%;
+  }
+
+  select {
+    width: auto;
+    margin: 2px;
+    height: 30px;
+  }
+
+  select:focus {
+    height: 30px;
+  }
+  .footer {
+      
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: rgb(7, 53, 75);
+      color: white;
+      text-align: center;
+    }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="nav1">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" width="100%">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Crowdsourcing</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/register" tabindex="-1" aria-disabled="true">Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://youtu.be/tAZR21dfGTY" tabindex="-1" class="btn btn-primary" role="button"
+            aria-pressed="true" target="_blank">Video Link</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <img src="/static/logok.png" alt="logo" align="right" />
+        </form>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+  <meta charset="utf-8">
+  <title>Register Form</title>
+  <!--<link rel="stylesheet" href="style.css">-->
+
+  <body>
+    <form class="signup-form" action="/register" method="post">
+      {% csrf_token %}
+      <!-- form header -->
+      <div class="form-header">
+        <h1>
+          <font color="white">Register Response</font>
+        </h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name <font color="red">*</font></label>
+            <input type="text" id="firstname" name="first" class="form-input name" placeholder="enter your first name"
+              required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name</label>
+            <input type="text" id="lastname" name="last" class="form-input" placeholder="enter your last name" />
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="email" class="label-title">Email <font color="red">*</font></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="enter your email"
+              required="required">
+          </div>
+          <div class="form-group right">
+            <label for="depa" class="label-title">Department <font color="red">*</font></label>
+            <input type="text" id="depa" name="depa" class="form-input" placeholder="enter your Department"
+              required="required" />
+          </div>
+        </div>
+        <center>
+          <a href="/mapview" tabindex="-1" class="btn btn-primary btn-lg active" role="button"
+            aria-pressed="true" target="_blank">Click Here To View the Map</a>
+        </center>
+        <!--Coordinate1 values -->
+        <br>
+        <br>
+        <strong style="color:rgb(16, 101, 150);">Enter Coordinate1 values:</strong>
+        <br>
+        <div class="horizontal-group">
+          <label for="Coordinate1" class="label-title">Coordinate1 <font color="red">*</font></label>
+          <div class="input-group">
+
+            <!-- declaration for first field -->
+            <input type="text" class="form-control 
+                        input-sm" name="cor1x" placeholder="X" />
+
+            <!-- reducong the gap between them to zero -->
+            <span class="input-group-btn" style="width:0px;"></span>
+
+            <!-- declaration for second field -->
+            <input type="text" class="form-control 
+                        input-sm" name="cor1y" placeholder="Y" />
+          </div>
+          <div class="form-group left">
+            <label for="time" class="label-title">Start time</label>
+            <input type="time" id="time" name="cor1st" class="form-input" placeholder="enter Coordinate1">
+          </div>
+          <div class="form-group right">
+            <label for="time" class="label-title">End time</label>
+            <input type="time" id="time" name="cor1ed" class="form-input" placeholder="enter Coordinate1">
+          </div>
+
+          <div class="form-group extra">
+            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10)<font color="red">*</font></label>
+            <input type="number" min="1" max="10" value="" id="rating" name="rate1" class="form-input rate"
+              placeholder="enter rating" required="required">
+          </div>
+          <div class="form-group">
+            <label for="choose-file" class="label-title">Reason Behind Choosing Coordinate1 <font color="red">*</font>
+            </label>
+            <textarea class="form-input" rows="2" name="reason1" cols="50" style="height:auto"
+              required="required"></textarea>
+          </div>
+        </div>
+        <br>
+        <!--Coordinate2 values -->
+        <strong style="color:rgb(16, 101, 150);">Enter Coordinate2 values:</strong>
+        <br>
+        <div class="horizontal-group">
+          <label for="Coordinate1" class="label-title">Coordinate2 <font color="red"> *</font></label>
+          <div class="input-group">
+
+            <!-- declaration for first field -->
+            <input type="text" class="form-control 
+                      input-sm" name="cor2x" placeholder="X" />
+
+            <!-- reducong the gap between them to zero -->
+            <span class="input-group-btn" style="width:0px;"></span>
+
+            <!-- declaration for second field -->
+            <input type="text" class="form-control 
+                      input-sm" name="cor2y" placeholder="Y" />
+          </div>
+          <div>
+            <label class="label-title"><small>
+                <font color="red">Distance b/w Coordinate1 and Coordinate2:</font>
+              </small></label>
+            <output id="result1"></output>
+          </div>
+          <div class="form-group left">
+            <label for="time" class="label-title">Start time</label>
+            <input type="time" id="time" class="form-input" name="cor2st" placeholder="time">
+          </div>
+          <div class="form-group right">
+            <label for="time" class="label-title">End time</label>
+            <input type="time" id="time" class="form-input" name="cor2ed" placeholder="enter Coordinate1">
+          </div>
+          <div class="form-group extra">
+            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font></label>
+            <input type="number" min="1" max="10" value="" id="rating" class="form-input rate" name="rate2"
+              placeholder="enter rating" required="required">
+              <div>
+              <label class="label-title"><small>
+                <font color="red"></font>
+                </small></label>
+              <output id="res1"></output>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="choose-file" class="label-title">Reason Behind Choosing Coordinate2 <font color="red">*</font>
+            </label>
+            <textarea class="form-input" rows="2" cols="50" name="reason2" style="height:auto"
+              required="required"></textarea>
+          </div>
+        </div>
+        <!--Coordinate3 values -->
+        <br>
+        <!--Coordinate1 values -->
+        <strong style="color:rgb(16, 101, 150);">Enter Coordinate3 values:</strong>
+        <br>
+        <div class="horizontal-group">
+          <label for="Coordinate1" class="label-title">Coordinate3 <font color="red">*</font></label>
+          <div class="input-group">
+
+            <!-- declaration for first field -->
+            <input type="text" class="form-control 
+                      input-sm" name="cor3x" placeholder="X" />
+
+            <!-- reducong the gap between them to zero -->
+            <span class="input-group-btn" style="width:0px;"></span>
+
+            <!-- declaration for second field -->
+            <input type="text" class="form-control 
+                      input-sm" name="cor3y" placeholder="Y" />
+          </div>
+          <div>
+            <label class="label-title"><Strong><small>
+                  <font color="red">Distance b/w Coordinate1 and Coordinate3:</font>
+                </small></Strong></label>
+            <output id="result2"></output>
+          </div>
+          <div>
+            <label class="label-title"><small>
+                <font color="red">Distance b/w Coordinate2 and Coordinate3:</font>
+              </small></label>
+            <output id="result3"></output>
+          </div>
+          <div class="form-group left">
+            <label for="time" class="label-title">Start time</label>
+            <input type="time" id="time" class="form-input" name="cor3st" placeholder="enter Coordinate1">
+          </div>
+          <div class="form-group right">
+            <label for="time" class="label-title">End time</label>
+            <input type="time" id="time" class="form-input" name="cor3ed" placeholder="enter Coordinate1">
+          </div>
+          <div class="form-group extra">
+            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font></label>
+            <input type="number" min="1" max="10" value="" id="rating" class="form-input rate" name="rate3"
+              placeholder="enter rating" required="required">
+              <div>
+                <label class="label-title"><Strong><small>
+                <font color="red"></font>
+                </small></Strong></label>
+                <output id="res2"></output>
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="choose-file" class="label-title">Reason Behind Choosing Coordinate3 <font color="red">*</font>
+            </label>
+            <textarea class="form-input" name="reason3" rows="2" cols="50" style="height:auto"
+              required="required"></textarea>
+          </div>
+        </div>
+
+        <!-- Gender and Hobbies -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="male" id="male">
+                <font color="black">Male</font>
+              </label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female">
+                <font color="black">Female</font>
+              </label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label for="experience" class="label-title">Transport (Public/Private) <font color="red">*</font></label>
+            <select name="trans">
+              <option>Private</option>
+              <option>Public</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Profile picture and Age -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="experience" class="label-title">Age <font color="red">*</font></label>
+            <input type="number" min="18" max="80" value="" class="form-input" name="age" required="required">
+          </div>
+        </div>
+      </div>
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>
+          <font color="white">* required</font>
+        </span>
+        <button type="submit" onclick="clicked();" value="Button" class="btn">Submit</button>
+      </div>
+
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+      $('.input-group').on('input', '.input-sm', function () {
+        var dist1 = 0;
+        var arr = [];
+        $('.input-sm').each(function () {
+          code = $(this).val();
+          arr.push(code);
+        });
+        dist1 = (((arr[0] - arr[2]) ** 2) + ((arr[1] - arr[3]) ** 2)) ** (0.5);
+        dist2 = (((arr[0] - arr[4]) ** 2) + ((arr[1] - arr[5]) ** 2)) ** (0.5);
+        dist3 = (((arr[2] - arr[4]) ** 2) + ((arr[3] - arr[5]) ** 2)) ** (0.5);
+        if (dist1 < 10) {
+          $('#result1').text("Distance should be greater than or equal to 10 *").css("color", "red");
+          $('#result1').text("Distance should be greater than or equal to 10 *").css("font-size", "12px");
+          $('#result1').text("Distance should be greater than or equal to 10 *").css('font-weight', 'bold');
+          $('#result1').text("Distance should be greater than or equal to 10 *").css('font-style', 'italic');
+        }
+        else {
+          $('#result1').text(dist1).css("color", "red");
+          $('#result1').text(dist1).css("font-size", "12px");
+          $('#result1').text(dist1).css('font-weight', 'bold');
+          $('#result1').text(dist1).css('font-style', 'italic');
+        }
+        if (dist2 < 10) {
+          $('#result2').text("Distance should be greater than or equal to 10 *").css("color", "red");
+          $('#result2').text("Distance should be greater than or equal to 10 *").css("font-size", "12px");
+          $('#result2').text("Distance should be greater than or equal to 10 *").css('font-weight', 'bold');
+          $('#result2').text("Distance should be greater than or equal to 10 *").css('font-style', 'italic');
+        }
+        else {
+          $('#result2').text(dist2).css("color", "red");
+          $('#result2').text(dist2).css("font-size", "12px");
+          $('#result2').text(dist2).css('font-weight', 'bold');
+          $('#result2').text(dist2).css('font-style', 'italic');
+        }
+        if (dist3 < 10) {
+          $('#result3').text("Distance should be greater than or equal to 10 *").css("color", "red");
+          $('#result3').text("Distance should be greater than or equal to 10 *").css("font-size", "12px");
+          $('#result3').text("Distance should be greater than or equal to 10 *").css('font-weight', 'bold');
+          $('#result3').text("Distance should be greater than or equal to 10 *").css('font-style', 'italic');
+        }
+        else {
+          $('#result3').text(dist3).css("color", "red");
+          $('#result3').text(dist3).css("font-size", "12px");
+          $('#result3').text(dist3).css('font-weight', 'bold');
+          $('#result3').text(dist3).css('font-style', 'italic');
+        }
+
+      });
+      
+      
+      
+      
+      $('.form-group').on('input', '.rate', function () {
+        var dist1 = 0;
+        var arr = [];
+        $('.rate').each(function () {
+          code = $(this).val();
+          arr.push(code);
+        });
+        dit1=10-arr[0];
+        dit2=dit1 - arr[1];
+        dit3=dit2- arr[2];
+        sum=arr[0]-(-arr[1])-(-arr[2]);
+        if (dit3<0) {
+          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css("color", "red");
+          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css("font-size", "12px");
+          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css('font-weight', 'bold');
+          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css('font-style', 'italic');
+        }
+        else {
+          $('#res1').text('Remaining rating weightage:  '+dit3).css("color", "red");
+          $('#res1').text('Remaining rating weightage:  '+dit3).css("font-size", "12px");
+          $('#res1').text('Remaining rating weightage:  '+dit3).css('font-weight', 'bold');
+          $('#res1').text('Remaining rating weightage:  '+dit3).css('font-style', 'italic');
+        }
+        if (dit3<0) {
+          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css("color", "red");
+          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css("font-size", "12px");
+          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css('font-weight', 'bold');
+          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *").css('font-style', 'italic');
+        }
+        else {
+          $('#res2').text('Remaining rating weightage:  '+dit3).css("color", "red");
+          $('#res2').text('Remaining rating weightage:  '+dit3).css("font-size", "12px");
+          $('#res2').text('Remaining rating weightage:  '+dit3).css('font-weight', 'bold');
+          $('#res2').text('Remaining rating weightage:  '+dit3).css('font-style', 'italic');
+        }
+
+      });
+      
+      
+      
+      
+
+      $(document).ready(function () {
+        $("#firstname").keypress(function (e) {
+          var keyCode = e.which;
+          /*
+          8 - (backspace)
+          32 - (space)
+          48-57 - (0-9)Numbers
+          */
+          if (!((keyCode >= 65 && keyCode <= 90)
+            || (keyCode >= 97 && keyCode <= 122))
+            && keyCode != 8 && keyCode != 32) {
+            e.preventDefault();
+          };
+        });
+      });
+
+      $(document).ready(function () {
+        $("#lastname").keypress(function (e) {
+          var keyCode = e.which;
+          /*
+          8 - (backspace)
+          32 - (space)
+          48-57 - (0-9)Numbers
+          */
+          if (!((keyCode >= 65 && keyCode <= 90)
+            || (keyCode >= 97 && keyCode <= 122))
+            && keyCode != 8 && keyCode != 32) {
+            e.preventDefault();
+          };
+        });
+      });
+
+
+      function clicked() {
+        if (confirm('Do you want to submit?')) {
+          yourformelement.submit();
+        } else {
+          return false;
+        }
+      }
+
+    </script>
+
+<div class="footer my-3">
+  <p>@ Developed and maintained by Suraj Mandal</p>
+</div>
+
+  </body>
+
+</html>
