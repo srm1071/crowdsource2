@@ -15,10 +15,8 @@ def regi(request):
         last=request.POST['last']
         email=request.POST['email']
         depa=request.POST['depa']
-        yes=request.POST['yes']
-        no=request.POST['no']
-        yesQuestion=request.POST['yesQuestion']
-        noQuestion=request.POST['noQuestion']
+        yesQuestion1=request.POST['yesQuestion']
+        noQuestion1=request.POST['noQuestion']
         cor1x= request.POST['cor1x']
         cor1y= request.POST['cor1y']
         cor1st=request.POST['cor1st']
@@ -40,8 +38,8 @@ def regi(request):
         gender=request.POST['gender']
         age=request.POST['age']
         trans=request.POST['trans']
-        res=Register(first=first,last=last,email=email,depa=depa,yes=yes,no=no,yesQuestion=yesQuestion,
-        noQuestion=noQuestion,cor1x=cor1x,cor1y=cor1y,cor1st=cor1st,cor1ed=cor1ed
+        res=Register(first=first,last=last,email=email,depa=depa,yesQuestion1=yesQuestion1,
+        noQuestion1=noQuestion1,cor1x=cor1x,cor1y=cor1y,cor1st=cor1st,cor1ed=cor1ed
         ,rate1=rate1,reason1=reason1,cor2x=cor2x,cor2y=cor2y,cor2st=cor2st,cor2ed=cor2ed,rate2=rate2,reason2=reason2,
         cor3x=cor3x,cor3y=cor3y,cor3st=cor3st,cor3ed=cor3ed,rate3=rate3,reason3=reason3,gender=gender,age=age,trans=trans)
         res.save()
