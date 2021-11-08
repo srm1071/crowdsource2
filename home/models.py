@@ -7,8 +7,6 @@ class Register(models.Model):
     last = models.CharField(max_length=30)
     email= models.EmailField()
     depa= models.TextField(default=None)
-    yes=models.TextField()
-    no=models.TextField()
     yesQuestion=models.TextField()
     noQuestion=models.TextField()
     cor1x= models.PositiveIntegerField()
