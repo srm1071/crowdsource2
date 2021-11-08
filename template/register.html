@@ -205,7 +205,7 @@
   <div class="nav1">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" width="100%">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Crowdsourcing</a>
+        <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -268,8 +268,29 @@
             <input type="text" id="depa" name="depa" class="form-input" placeholder="enter your Department"
               required="required" />
           </div>
+          <font color="black">Please Choose One of the option:<font color="red">*</font></font>
+          <br>
+          <label>
+            <input type="radio" id="yes" name="yesOrNo" value="yes" onchange="displayQuestion(this.value)" required="required"/>
+            <font color="black">Student joined on or after 2020</font>
+          </label>
+          <label>
+            <input type="radio" id="no" name="yesOrNo" value="no" onchange="displayQuestion(this.value)" required="required"/>
+            <font color="black">Others</font>
+          </label>
+
+          <div id="yesQuestion" style="display:none;"><br />
+            <font color="black">Please Enter your Roll (eg: Roll no: 90/CSE/2010110. Then please enter only 90/CSE):<font color="red">*</font></font></font>
+            <input type="text" placeholder="answer here . . . " required="required"/>
+          </div>
+
+          <div id="noQuestion" style="display:none;"><br />
+            <font color="black">Is the bank very near to Administrative building?<font color="red">*</font></font></font>
+            <input type="text" placeholder="answer here . . . " required="required"/>
+          </div>
         </div>
-        
+        <br>
+
 
         <center>
           <a href="/mapview" tabindex="-1" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
@@ -306,7 +327,7 @@
 
           <div class="form-group extra">
             <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10)<font color="red">*</font>
-              </label>
+            </label>
             <input type="number" min="1" max="10" value="" id="rating" name="rate1" class="form-input rate"
               placeholder="enter rating" required="required">
           </div>
@@ -352,7 +373,7 @@
           </div>
           <div class="form-group extra">
             <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font>
-              </label>
+            </label>
             <input type="number" min="1" max="10" value="" id="rating" class="form-input rate" name="rate2"
               placeholder="enter rating" required="required">
             <div>
@@ -411,7 +432,7 @@
           </div>
           <div class="form-group extra">
             <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font>
-              </label>
+            </label>
             <input type="number" min="1" max="10" value="" id="rating" class="form-input rate" name="rate3"
               placeholder="enter rating" required="required">
             <div>
@@ -600,6 +621,14 @@
         });
       });
 
+      function displayQuestion(answer) {
+        document.getElementById(answer + 'Question').style.display = "block";
+        if (answer == "yes") { // hide the div that is not selected
+          document.getElementById('noQuestion').style.display = "none";
+        } else if (answer == "no") {
+          document.getElementById('yesQuestion').style.display = "none";
+        }
+      }
 
       function clicked() {
         if (confirm('Do you want to submit?')) {
