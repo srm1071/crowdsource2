@@ -12,180 +12,184 @@
 
   <title>Welcome to our Survey</title>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<style>
-  /*---------------------------------------*/
-  /* Font */
-  /*---------------------------------------*/
-  @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-
-  /*---------------------------------------*/
-  /* Register Form  #78b7ba*/
-  /*---------------------------------------*/
-  body {
-    background: linear-gradient(to right, #0e8288 0%, #0e8288 50%, #0e8288 99%);
-  }
-
-  .signup-form {
-    font-family: "Roboto", sans-serif;
-    width: 650px;
-    margin: 30px auto;
-    background: linear-gradient(to right, #ebeecd 0%, #ebeecd 50%, #ebeecd 99%);
-    border-radius: 10px;
-  }
-
-  /*---------------------------------------*/
-  /* Form Header */
-  /*---------------------------------------*/
-  .form-header {
-    background-color: #383f3f;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .form-header h1 {
-    font-size: 30px;
-    text-align: center;
-    color: #666;
-    padding: 20px 0;
-    border-bottom: 1px solid #cccccc;
-  }
-
-  /*---------------------------------------*/
-  /* Form Body */
-  /*---------------------------------------*/
-  .form-body {
-    padding: 10px 40px;
-    color: rgb(204, 189, 189);
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-
-  .form-body .label-title {
-    color: #10744a;
-    font-size: 17px;
-
-  }
-  .form-body .label-rating {
-    color: #10744a;
-    font-size: 17px;
-
-  }
-
-  .form-body .form-input {
-    font-size: 17px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 34px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #0a0a0a;
-    text-align: left;
-    border: 1px solid #0c0c0c;
-    border-radius: 4px;
-    background: rgb(255, 255, 255);
-    outline: none;
-  }
+  <style>
+    /*---------------------------------------*/
+    /* Font */
+    /*---------------------------------------*/
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 
+    /*---------------------------------------*/
+    /* Register Form  #78b7ba*/
+    /*---------------------------------------*/
+    body {
+      background: linear-gradient(to right, #0e8288 0%, #0e8288 50%, #0e8288 99%);
+    }
 
-  .horizontal-group .left {
-    float: left;
-    width: 50%;
-  }
+    .signup-form {
+      font-family: "Roboto", sans-serif;
+      width: 650px;
+      margin: 30px auto;
+      background: linear-gradient(to right, #ebeecd 0%, #ebeecd 50%, #ebeecd 99%);
+      border-radius: 10px;
+    }
 
-  .horizontal-group .right {
-    float: right;
-    width: 49%;
-  }
-  .horizontal-group .extra {
-    width: 60%;
-  }
+    /*---------------------------------------*/
+    /* Form Header */
+    /*---------------------------------------*/
+    .form-header {
+      background-color: #383f3f;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
 
-  input[type="file"] {
-    outline: none;
-    cursor: pointer;
-    font-size: 17px;
-  }
+    .form-header h1 {
+      font-size: 30px;
+      text-align: center;
+      color: #666;
+      padding: 20px 0;
+      border-bottom: 1px solid #cccccc;
+    }
 
-  #range-label {
-    width: 15%;
-    padding: 5px;
-    background-color: #0d0d0e;
-    color: white;
-    border-radius: 5px;
-    font-size: 17px;
-    position: relative;
-    top: -8px;
-  }
+    /*---------------------------------------*/
+    /* Form Body */
+    /*---------------------------------------*/
+    .form-body {
+      padding: 10px 40px;
+      color: rgb(204, 189, 189);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
 
 
-  ::-webkit-input-placeholder {
-    color: #d9d9d9;
-  }
+    .form-body .label-title {
+      color: #10744a;
+      font-size: 17px;
 
-  /*---------------------------------------*/
-  /* Form Footer */
-  /*---------------------------------------*/
-  .signup-form .form-footer {
-    background-color: #383f3f;
-    ;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    padding: 10px 40px;
-    text-align: right;
-    border-top: 1px solid #a29cd3;
-    clear: both;
-  }
+    }
 
-  .form-footer span {
-    float: left;
-    margin-top: 10px;
-    color: #999;
-    font-style: italic;
-    font-weight: thin;
-  }
+    .form-body .label-rating {
+      color: #10744a;
+      font-size: 17px;
 
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1BBA93;
-    font-size: 17px;
-    border: none;
-    border-radius: 5px;
-    color: #bcf5e7;
-    cursor: pointer;
-  }
+    }
 
-  .btn:hover {
-    background-color: #0b0c0c;
-    color: white;
-  }
+    .form-body .form-input {
+      font-size: 17px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 34px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #0a0a0a;
+      text-align: left;
+      border: 1px solid #0c0c0c;
+      border-radius: 4px;
+      background: rgb(255, 255, 255);
+      outline: none;
+    }
 
-  input[type="radio"] {
-    margin: 0 5px 0 10px;
-  }
-  nav1 {
-    width: 100%;
-  }
 
-  select {
-    width: auto;
-    margin: 2px;
-    height: 30px;
-  }
 
-  select:focus {
-    height: 30px;
-  }
-  .footer {
-      
+    .horizontal-group .left {
+      float: left;
+      width: 50%;
+    }
+
+    .horizontal-group .right {
+      float: right;
+      width: 49%;
+    }
+
+    .horizontal-group .extra {
+      width: 60%;
+    }
+
+    input[type="file"] {
+      outline: none;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    #range-label {
+      width: 15%;
+      padding: 5px;
+      background-color: #0d0d0e;
+      color: white;
+      border-radius: 5px;
+      font-size: 17px;
+      position: relative;
+      top: -8px;
+    }
+
+
+    ::-webkit-input-placeholder {
+      color: #d9d9d9;
+    }
+
+    /*---------------------------------------*/
+    /* Form Footer */
+    /*---------------------------------------*/
+    .signup-form .form-footer {
+      background-color: #383f3f;
+      ;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      padding: 10px 40px;
+      text-align: right;
+      border-top: 1px solid #a29cd3;
+      clear: both;
+    }
+
+    .form-footer span {
+      float: left;
+      margin-top: 10px;
+      color: #999;
+      font-style: italic;
+      font-weight: thin;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1BBA93;
+      font-size: 17px;
+      border: none;
+      border-radius: 5px;
+      color: #bcf5e7;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0b0c0c;
+      color: white;
+    }
+
+    input[type="radio"] {
+      margin: 0 5px 0 10px;
+    }
+
+    nav1 {
+      width: 100%;
+    }
+
+    select {
+      width: auto;
+      margin: 2px;
+      height: 30px;
+    }
+
+    select:focus {
+      height: 30px;
+    }
+
+    .footer {
+
       left: 0;
       bottom: 0;
       width: 100%;
@@ -193,35 +197,35 @@
       color: white;
       text-align: center;
     }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div class="nav1">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" width="100%">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Crowdsourcing</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/register" tabindex="-1" aria-disabled="true">Submit Response</a>
-          </li>
-          <li class="nav-item">
-            <a href="https://youtu.be/tAZR21dfGTY" tabindex="-1" class="btn btn-primary" role="button"
-            aria-pressed="true" target="_blank">Video Instructions</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" width="100%">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Crowdsourcing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/register" tabindex="-1" aria-disabled="true">Submit Response</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://youtu.be/tAZR21dfGTY" tabindex="-1" class="btn btn-primary" role="button"
+                aria-pressed="true" target="_blank">Video Instructions</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
   </div>
 
   <meta charset="utf-8">
@@ -245,8 +249,8 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="firstname" class="label-title">First name</label>
-            <input type="text" id="firstname" name="first" class="form-input name" placeholder="enter your first name"
-              />
+            <input type="text" id="firstname" name="first" class="form-input name"
+              placeholder="enter your first name" />
           </div>
           <div class="form-group right">
             <label for="lastname" class="label-title">Last name</label>
@@ -257,8 +261,7 @@
         <div class="horizontal-group">
           <div class="form-group left">
             <label for="email" class="label-title">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="enter your email"
-             >
+            <input type="email" id="email" name="email" class="form-input" placeholder="enter your email">
           </div>
           <div class="form-group right">
             <label for="depa" class="label-title">Department <font color="red">*</font></label>
@@ -266,9 +269,11 @@
               required="required" />
           </div>
         </div>
+        
+
         <center>
-          <a href="/mapview" tabindex="-1" class="btn btn-primary btn-lg active" role="button"
-            aria-pressed="true" target="_blank">Click Here To View the Map</a>
+          <a href="/mapview" tabindex="-1" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
+            target="_blank">Click Here To View the Map</a>
         </center>
         <!--Coordinate1 values -->
         <br>
@@ -300,7 +305,8 @@
           </div>
 
           <div class="form-group extra">
-            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10)<font color="red">*</font></label>
+            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10)<font color="red">*</font>
+              </label>
             <input type="number" min="1" max="10" value="" id="rating" name="rate1" class="form-input rate"
               placeholder="enter rating" required="required">
           </div>
@@ -345,15 +351,16 @@
             <input type="time" id="time" class="form-input" name="cor2ed" placeholder="enter Coordinate1">
           </div>
           <div class="form-group extra">
-            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font></label>
+            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font>
+              </label>
             <input type="number" min="1" max="10" value="" id="rating" class="form-input rate" name="rate2"
               placeholder="enter rating" required="required">
-              <div>
+            <div>
               <label class="label-title"><small>
-                <font color="red"></font>
+                  <font color="red"></font>
                 </small></label>
               <output id="res1"></output>
-              </div>
+            </div>
           </div>
           <div class="form-group">
             <label for="choose-file" class="label-title">Reason Behind Choosing Coordinate2 <font color="red">*</font>
@@ -403,15 +410,16 @@
             <input type="time" id="time" class="form-input" name="cor3ed" placeholder="enter Coordinate1">
           </div>
           <div class="form-group extra">
-            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font></label>
+            <label for="rating" class="label-title">Rating (Total of 3 coordinate ratings=10) <font color="red">*</font>
+              </label>
             <input type="number" min="1" max="10" value="" id="rating" class="form-input rate" name="rate3"
               placeholder="enter rating" required="required">
-              <div>
-                <label class="label-title"><Strong><small>
-                <font color="red"></font>
-                </small></Strong></label>
-                <output id="res2"></output>
-              </div>
+            <div>
+              <label class="label-title"><Strong><small>
+                    <font color="red"></font>
+                  </small></Strong></label>
+              <output id="res2"></output>
+            </div>
           </div>
           <div class="form-group">
             <label for="choose-file" class="label-title">Reason Behind Choosing Coordinate3 <font color="red">*</font>
@@ -514,10 +522,10 @@
         }
 
       });
-      
-      
-      
-      
+
+
+
+
       $('.form-group').on('input', '.rate', function () {
         var dist1 = 0;
         var arr = [];
@@ -525,40 +533,40 @@
           code = $(this).val();
           arr.push(code);
         });
-        dit1=10-arr[0];
-        dit2=dit1 - arr[1];
-        dit3=dit2- arr[2];
-        sum=arr[0]-(-arr[1])-(-arr[2]);
-        if (dit3<0) {
-          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css("color", "red");
-          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css("font-size", "12px");
-          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css('font-weight', 'bold');
-          $('#res1').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css('font-style', 'italic');
+        dit1 = 10 - arr[0];
+        dit2 = dit1 - arr[1];
+        dit3 = dit2 - arr[2];
+        sum = arr[0] - (-arr[1]) - (-arr[2]);
+        if (dit3 < 0) {
+          $('#res1').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css("color", "red");
+          $('#res1').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css("font-size", "12px");
+          $('#res1').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css('font-weight', 'bold');
+          $('#res1').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please correct it.").css('font-style', 'italic');
         }
         else {
-          $('#res1').text('Remaining rating weightage:  '+dit3).css("color", "red");
-          $('#res1').text('Remaining rating weightage:  '+dit3).css("font-size", "12px");
-          $('#res1').text('Remaining rating weightage:  '+dit3).css('font-weight', 'bold');
-          $('#res1').text('Remaining rating weightage:  '+dit3).css('font-style', 'italic');
+          $('#res1').text('Remaining rating weightage:  ' + dit3).css("color", "red");
+          $('#res1').text('Remaining rating weightage:  ' + dit3).css("font-size", "12px");
+          $('#res1').text('Remaining rating weightage:  ' + dit3).css('font-weight', 'bold');
+          $('#res1').text('Remaining rating weightage:  ' + dit3).css('font-style', 'italic');
         }
-        if (dit3<0) {
-          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css("color", "red");
-          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css("font-size", "12px");
-          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css('font-weight', 'bold');
-          $('#res2').text("Sum is "+sum+", Sum of 3 coordinate ratings should be =10 *.Please correct it.").css('font-style',.  Please correct it. 'italic');
+        if (dit3 < 0) {
+          $('#res2').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css("color", "red");
+          $('#res2').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css("font-size", "12px");
+          $('#res2').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css('font-weight', 'bold');
+          $('#res2').text("Sum is " + sum + ", Sum of 3 coordinate ratings should be =10 *. Please Correct it.").css('font-style', 'italic');
         }
         else {
-          $('#res2').text('Remaining rating weightage:  '+dit3).css("color", "red");
-          $('#res2').text('Remaining rating weightage:  '+dit3).css("font-size", "12px");
-          $('#res2').text('Remaining rating weightage:  '+dit3).css('font-weight', 'bold');
-          $('#res2').text('Remaining rating weightage:  '+dit3).css('font-style', 'italic');
+          $('#res2').text('Remaining rating weightage:  ' + dit3).css("color", "red");
+          $('#res2').text('Remaining rating weightage:  ' + dit3).css("font-size", "12px");
+          $('#res2').text('Remaining rating weightage:  ' + dit3).css('font-weight', 'bold');
+          $('#res2').text('Remaining rating weightage:  ' + dit3).css('font-style', 'italic');
         }
 
       });
-      
-      
-      
-      
+
+
+
+
 
       $(document).ready(function () {
         $("#firstname").keypress(function (e) {
@@ -606,9 +614,9 @@
 
     </script>
 
-<div class="footer my-3">
-  <p>@ Developed and maintained by Suraj Mandal</p>
-</div>
+    <div class="footer my-3">
+      <p>@ Developed and maintained by Suraj Mandal</p>
+    </div>
 
   </body>
 
